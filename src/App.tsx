@@ -3,6 +3,7 @@ import Hero from "./components/Hero/Hero";
 import Breakdown from "./components/Breakdown/Breakdown";
 import Donate from "./components/Donate/Donate";
 import Emergency from "./components/Emergency/Emergency";
+import Latest from "./components/Latest/Latest";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Breakdown />
       <Donate />
       <Emergency />
+      <Latest />
     </>
   );
 }

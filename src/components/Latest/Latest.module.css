@@ -1,0 +1,47 @@
+.parent {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  margin: 5px;
+}
+.parent > div {
+  margin-bottom: 15px;
+}
+
+.btnGroup {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 5px 0;
+  font-size: xx-small;
+}
+
+.miniBtn {
+  border: none;
+  padding: 2px 13px;
+  font-size: xx-small;
+  background-color: #272727;
+  border-radius: 30px;
+}
+
+.readMoreContent {
+  font-size: small;
+}
+
+.readMoreBtn {
+  font-size: small;
+  text-decoration: underline;
+  margin-top: 5px;
+  &:hover {
+    color: var(--highlight);
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 768px) {
+  .latestContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
