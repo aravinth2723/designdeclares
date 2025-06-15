@@ -1,4 +1,5 @@
 import styles from "./Breakdown.module.css";
+import { MdKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
 
 const heading = "This is Breakdown";
 const para =
@@ -35,18 +36,20 @@ const Breakdown: React.FC = () => {
       <h1 className={styles.heading}>{heading}</h1>
       <section className={styles.card}>
         <p className={styles.para}>{para}</p>
-        {items.map((item, idx) => (
-          <div key={idx} className={styles.sections}>
+        {items.map((item, index) => (
+          <div key={index} className={styles.sections}>
             <div className={styles.header}>
               <p className={styles.title}>{item.title}</p>
+              <MdKeyboardArrowUp size={24} />
             </div>
             <ul className={styles.content}>
-              {item.content.map((line, i) => (
-                <li key={i}>{line}</li>
+              {item.content.map((data, i) => (
+                <li key={i}>{data}</li>
               ))}
             </ul>
           </div>
         ))}
+        <button className="primary-btn">View our D! Intro Video</button>
       </section>
     </section>
   );
