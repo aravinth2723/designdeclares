@@ -1,0 +1,62 @@
+.container {
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.heroText {
+  font-family: "Anton", sans-serif;
+  font-size: clamp(5rem, 13vw, 11rem);
+  line-height: 1;
+  width: fit-content;
+  height: fit-content;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.highlight {
+  color: var(--highlight);
+}
+
+.para {
+  height: fit-content;
+  max-width: 550px;
+  font-size: clamp(16px, 1.5vw, 18px);
+}
+
+.actionBtn {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  gap: 2px;
+  bottom: 20px;
+  right: 20px;
+}
+
+.actionBtn > div {
+  width: 180px;
+  padding: 10px;
+  background-color: var(--primary);
+  color: var(--bg-color);
+  border-radius: 2px;
+  &:hover {
+    cursor: pointer;
+    background-color: var(--highlight);
+  }
+}
+
+.clildOne {
+  display: flex;
+  gap: 2px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (min-width: 1030px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
