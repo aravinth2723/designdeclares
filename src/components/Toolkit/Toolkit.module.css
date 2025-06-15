@@ -1,0 +1,36 @@
+.content {
+  margin: 10px 0;
+  font-size: small;
+}
+
+.subContent {
+  font-size: x-small;
+  margin-bottom: 15px;
+}
+
+.emailInput {
+  padding: 10px;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid var(--primary);
+  outline: none;
+  color: var(--primary);
+  margin: 10px 0;
+}
+
+.privacyPolicy {
+  font-size: x-small;
+  margin-top: 20px;
+  text-decoration: underline;
+  &:hover {
+    color: var(--highlight);
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 768px) {
+  .toolkitContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -35,3 +35,16 @@ body {
 .heading {
   font-size: medium;
 }
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.checkbox > input {
+  margin-right: 10px;
+}
+.checkbox > label {
+  font-size: xx-small;
+}

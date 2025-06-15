@@ -36,7 +36,7 @@ const Declare: React.FC = () => {
       <h1 className="heading">{heading}</h1>
       <div className={styles.content}>
         <p className={styles.content}>{content}</p>
-        <form onSubmit={onSubmit} className={styles.declarationForm}>
+        {/* <form onSubmit={onSubmit} className={styles.declarationForm}>
           <h2>I am Declaring Emergency</h2>
           <div className={styles.termsCondition}>
             <div>
@@ -58,7 +58,7 @@ const Declare: React.FC = () => {
               <label>i would like to be added</label>
             </div>
           </div>
-        </form>
+        </form> */}
       </div>
     </section>
   );
