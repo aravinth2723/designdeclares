@@ -1,11 +1,16 @@
 .donateContainer {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  padding: 100px 0;
+  text-align: justify;
 }
 
 .buttons {
   display: flex;
   gap: 10px;
   margin: 20px 0;
+}
+
+@media (min-width: 768px) {
+  .donateContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
