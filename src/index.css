@@ -1,7 +1,15 @@
+:root {
+  --bg-color: #000000;
+  --primary: #e7e7e7;
+  --secondary: #c4c4c4;
+  --higlight: #ff6340;
+}
 body {
   font-family: "Poppins", sans-serif;
   width: 100%;
   height: 100%;
+  background-color: var(--bg-color);
+  color: var(--secondary);
 }
 
 * {
