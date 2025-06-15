@@ -1,4 +1,4 @@
-import Card from "../common/Card/Card";
+import styles from "./Breakdown.module.css";
 
 const heading = "This is Breakdown";
 const para =
@@ -30,6 +30,25 @@ const items = [
 ];
 
 const Breakdown: React.FC = () => {
-  return <Card items={items} para={para} heading={heading} />;
+  return (
+    <section className="container">
+      <h1 className={styles.heading}>{heading}</h1>
+      <section className={styles.card}>
+        <p className={styles.para}>{para}</p>
+        {items.map((item, idx) => (
+          <div key={idx} className={styles.sections}>
+            <div className={styles.header}>
+              <p className={styles.title}>{item.title}</p>
+            </div>
+            <ul className={styles.content}>
+              {item.content.map((line, i) => (
+                <li key={i}>{line}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </section>
+    </section>
+  );
 };
 export default Breakdown;
