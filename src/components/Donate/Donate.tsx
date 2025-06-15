@@ -8,7 +8,7 @@ const actions = ["Donate £10", "Donate £20", "Donate £50"];
 const Donate = () => {
   return (
     <section className={`${styles.donateContainer} container`}>
-      <h1 className={styles.heading}>{heading}</h1>
+      <h1 className="heading">{heading}</h1>
       <div>
         <p className={styles.para}>{para}</p>
         <div className={styles.buttons}>

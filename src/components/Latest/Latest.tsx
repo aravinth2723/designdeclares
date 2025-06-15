@@ -19,7 +19,7 @@ const items = [
 const Latest = () => {
   return (
     <section className={`${styles.latestContainer} container`}>
-      <h1>{heading}</h1>
+      <h1 className="heading">{heading}</h1>
       <section>
         {items.map((item, i) => (
           <div key={i} className={styles.parent}>

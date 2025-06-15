@@ -1,7 +1,3 @@
-.heading {
-  flex: 1;
-}
-
 .para {
   font-size: 1.5rem;
   color: var(--primary);
@@ -41,4 +37,11 @@
 
 .content li {
   text-align: justify;
+}
+
+@media (min-width: 768px) {
+  .breakdownContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

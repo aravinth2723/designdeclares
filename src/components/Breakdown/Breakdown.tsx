@@ -32,8 +32,8 @@ const items = [
 
 const Breakdown: React.FC = () => {
   return (
-    <section className="container">
-      <h1 className={styles.heading}>{heading}</h1>
+    <section className={`${styles.breakdownContainer} container`}>
+      <h1 className="heading">{heading}</h1>
       <section className={styles.card}>
         <p className={styles.para}>{para}</p>
         {items.map((item, index) => (
