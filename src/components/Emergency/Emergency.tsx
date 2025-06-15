@@ -49,7 +49,7 @@ const items = [
 const Emergency: React.FC = () => {
   return (
     <section className={`${styles.emergencyContainer} container`}>
-      <h1>{heading}</h1>
+      <h1 className="heading">{heading}</h1>
       <div>
         <p className={styles.para}>{para}</p>
         <div className={styles.card}>
