@@ -18,9 +18,8 @@ const Toolkit: React.FC = () => {
       <div>
         <img
           src={toolkitImg}
-          className="text-animation"
+          className={`${styles.toolkitImg} text-animation`}
           alt="Toolkit"
-          width={472}
         />
         <p className={`${styles.content} text-animation`}>{content}</p>
         <p className={`${styles.subContent} text-animation`}>{subContent}</p>
