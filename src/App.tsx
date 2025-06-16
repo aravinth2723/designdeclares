@@ -7,6 +7,7 @@ import Declare from "./components/Declare/Declare";
 import Latest from "./components/Latest/Latest";
 import Toolkit from "./components/Toolkit/Toolkit";
 import Signatories from "./components/Signatories/Signatories";
+import Supportes from "./components/Supporters/Supportes";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Latest />
       <Toolkit />
       <Signatories />
+      <Supportes />
     </>
   );
 }
