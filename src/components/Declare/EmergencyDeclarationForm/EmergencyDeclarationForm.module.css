@@ -23,7 +23,8 @@
 }
 
 .formField input,
-select {
+select,
+textarea {
   background-color: transparent;
   border: 1px solid var(--secondary);
   border-bottom: none;
@@ -31,6 +32,11 @@ select {
   outline: none;
   padding: 10px;
   width: 100%;
+}
+
+.formField textarea {
+  border-bottom: 1px solid var(--secondary);
+  resize: none;
 }
 
 .consentSection {
