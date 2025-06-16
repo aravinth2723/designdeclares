@@ -520,7 +520,10 @@ const Signatories: React.FC = () => {
     <section className="container">
       <section>
         <h1 className={styles.headline}>#513</h1>
-        <p className="heading">Signatories and counting in</p>
+        <div className={styles.section}>
+          <p className="heading">Signatories and counting in</p>
+          <p>D! UK</p>
+        </div>
         <div className={styles.dataGroup}>
           {data.map((d, i) => (
             <p key={i}>{d}</p>
