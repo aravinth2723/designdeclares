@@ -8,6 +8,7 @@ import Latest from "./components/Latest/Latest";
 import Toolkit from "./components/Toolkit/Toolkit";
 import Signatories from "./components/Signatories/Signatories";
 import Supportes from "./components/Supporters/Supportes";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Toolkit />
       <Signatories />
       <Supportes />
+      <Footer />
     </>
   );
 }
