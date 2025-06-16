@@ -1,6 +1,27 @@
+import { useState } from "react";
 import styles from "./Hero.module.css";
+import {
+  FaHome,
+  FaInfoCircle,
+  FaNewspaper,
+  FaEnvelope,
+  FaGlobe,
+} from "react-icons/fa";
+
+const menuItem = [
+  { name: "Home", icon: <FaHome /> },
+  { name: "About", icon: <FaInfoCircle /> },
+  { name: "Latest", icon: <FaNewspaper /> },
+  { name: "Contact", icon: <FaEnvelope /> },
+  { name: "Choose Global Chapter", icon: <FaGlobe /> },
+];
 
 const Hero: React.FC = () => {
+  const [isMenuToggle, setMenuToggle] = useState(false);
+  function ontoggle() {
+    setMenuToggle(!isMenuToggle);
+  }
+
   return (
     <section className={styles.container}>
       <div className={styles.heroText}>
@@ -18,10 +39,20 @@ const Hero: React.FC = () => {
         world.
       </p>
       <div className={styles.actionBtn}>
-        <div className={styles.clildOne}>
+        <div className={styles.clildOne} onClick={ontoggle}>
           <div>Menu</div>
-          <div>+</div>
+          <div>{isMenuToggle ? "x" : "+"}</div>
         </div>
+        {isMenuToggle && (
+          <ul className={styles.menuItem}>
+            {menuItem.map(({ name, icon }) => (
+              <li>
+                {icon}
+                <span>{name}</span>
+              </li>
+            ))}
+          </ul>
+        )}
         <div>Declare Now</div>
       </div>
     </section>

@@ -37,7 +37,7 @@
 }
 
 .actionBtn > div {
-  width: 180px;
+  width: 100%;
   padding: 10px;
   background-color: var(--primary);
   color: var(--bg-color);
@@ -53,6 +53,24 @@
   gap: 2px;
   justify-content: space-between;
   align-items: center;
+}
+
+.menuItem {
+  list-style-type: none;
+  background-color: var(--primary);
+  color: var(--bg-color);
+  padding: 5px;
+}
+
+.menuItem li {
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
 }
 
 @media (min-width: 1030px) {
