@@ -1,16 +1,3 @@
-.declarationForm {
-  margin: 10px 0;
-  padding: 10px;
-  border: 1px solid var(--primary);
-}
-
-.checkbox {
-  padding: 5px;
-}
-
-.termsCondition {
-}
-
 @media (min-width: 768px) {
   .declareContainer {
     display: grid;

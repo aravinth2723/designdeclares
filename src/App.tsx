@@ -6,6 +6,7 @@ import Emergency from "./components/Emergency/Emergency";
 import Declare from "./components/Declare/Declare";
 import Latest from "./components/Latest/Latest";
 import Toolkit from "./components/Toolkit/Toolkit";
+import Signatories from "./components/Signatories/Signatories";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Declare />
       <Latest />
       <Toolkit />
+      <Signatories />
     </>
   );
 }
