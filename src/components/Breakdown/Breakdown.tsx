@@ -1,12 +1,15 @@
+import React, { useState } from "react";
 import styles from "./Breakdown.module.css";
 import { MdKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
 
 const heading = "This is Breakdown";
 const para =
   "The science is settled. We are in an emergency of climate and nature. The world is past breaking point; the breakdown has begun...";
-const items = [
+
+const initialItems = [
   {
     title: "The Role of Design",
+    active: false,
     content: [
       "As designers working within an industry that relies on production and powers global consumption, we must acknowledge that we have had a role in bringing us to where we are now, and that we have an important role in what comes next.",
       "Because designers are makers. We make ideas real. We generate solutions. We build the world - dreaming up new futures and bringing them to life in ways that are beautiful, vital and impossible to resist. It’s not quite magic, but it feels like it.",
@@ -14,6 +17,7 @@ const items = [
   },
   {
     title: "Time for Change",
+    active: false,
     content: [
       "Together with our clients, partners and colleagues across the supply chain, we are daring to reimagine the way we create every product, service, campaign and designed solution we put out into the world.",
       "It means introducing principles of sustainability, circularity and - ultimately - regenerative design into our practice to recapture and repurpose resources and materials.",
@@ -23,6 +27,7 @@ const items = [
   },
   {
     title: "Act with Urgency",
+    active: false,
     content: [
       "We know all we need to make this a reality. The information, the guidance, the inspiration and solutions are there. What design needs now is action - meaningful steps that can begin to connect what we know to what we do.",
       "This is the most important brief of our lives. Join us as we begin to design a climate-positive future.",
@@ -31,6 +36,16 @@ const items = [
 ];
 
 const Breakdown: React.FC = () => {
+  const [items, setItems] = useState(initialItems);
+
+  const toggleItem = (index: number) => {
+    setItems((prevItems) =>
+      prevItems.map((item, i) =>
+        i === index ? { ...item, active: !item.active } : item
+      )
+    );
+  };
+
   return (
     <section className={`${styles.breakdownContainer} container`}>
       <h1 className="heading">{heading}</h1>
@@ -38,17 +53,21 @@ const Breakdown: React.FC = () => {
         <p className={`${styles.para} text-animation`}>{para}</p>
         {items.map((item, index) => (
           <div key={index} className={styles.sections}>
-            <div className={styles.header}>
+            <div className={styles.header} onClick={() => toggleItem(index)}>
               <p className={styles.title}>{item.title}</p>
-              <MdKeyboardArrowUp size={24} />
+              {item.active ? (
+                <MdKeyboardArrowDown size={24} />
+              ) : (
+                <MdKeyboardArrowUp size={24} />
+              )}
             </div>
-            <ul className={styles.content}>
-              {item.content.map((data, i) => (
-                <li key={i} className="text-animation">
-                  {data}
-                </li>
-              ))}
-            </ul>
+            {item.active && (
+              <ul className={styles.content}>
+                {item.content.map((data, i) => (
+                  <li key={i}>{data}</li>
+                ))}
+              </ul>
+            )}
           </div>
         ))}
         <button className="primary-btn">View our D! Intro Video</button>
@@ -56,4 +75,5 @@ const Breakdown: React.FC = () => {
     </section>
   );
 };
+
 export default Breakdown;
