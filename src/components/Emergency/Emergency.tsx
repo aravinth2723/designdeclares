@@ -51,7 +51,7 @@ const Emergency: React.FC = () => {
     <section className={`${styles.emergencyContainer} container`}>
       <h1 className="heading">{heading}</h1>
       <div>
-        <p className={styles.para}>{para}</p>
+        <p className={`${styles.para} text-animation`}>{para}</p>
         <div className={styles.card}>
           {items.map((item, i) => (
             <div key={i}>
@@ -59,7 +59,9 @@ const Emergency: React.FC = () => {
                 <span>{i + 1}</span>
                 {item.title}
               </h1>
-              <p className={styles.content}>{item.content}</p>
+              <p className={`${styles.content} text-animation`}>
+                {item.content}
+              </p>
             </div>
           ))}
         </div>

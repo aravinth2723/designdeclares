@@ -35,7 +35,7 @@ const Breakdown: React.FC = () => {
     <section className={`${styles.breakdownContainer} container`}>
       <h1 className="heading">{heading}</h1>
       <section className={styles.card}>
-        <p className={styles.para}>{para}</p>
+        <p className={`${styles.para} text-animation`}>{para}</p>
         {items.map((item, index) => (
           <div key={index} className={styles.sections}>
             <div className={styles.header}>
@@ -44,7 +44,9 @@ const Breakdown: React.FC = () => {
             </div>
             <ul className={styles.content}>
               {item.content.map((data, i) => (
-                <li key={i}>{data}</li>
+                <li key={i} className="text-animation">
+                  {data}
+                </li>
               ))}
             </ul>
           </div>

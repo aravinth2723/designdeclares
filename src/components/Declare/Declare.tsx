@@ -10,7 +10,7 @@ const Declare: React.FC = () => {
     <section className={`${styles.declareContainer} container`}>
       <h1 className="heading">{heading}</h1>
       <div>
-        <p>{content}</p>
+        <p className="text-animation">{content}</p>
         <EmergencyDeclarationForm />
       </div>
     </section>

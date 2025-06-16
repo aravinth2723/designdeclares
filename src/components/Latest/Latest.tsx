@@ -23,7 +23,7 @@ const Latest = () => {
       <section>
         {items.map((item, i) => (
           <div key={i} className={styles.parent}>
-            <div>
+            <div className="text-animation">
               <div className={styles.btnGroup}>
                 <p className={styles.miniBtn}>Events</p>
                 <p className={styles.miniBtn}>D! UK</p>
@@ -31,7 +31,7 @@ const Latest = () => {
               </div>
               <p>{item.content}</p>
             </div>
-            <div>
+            <div className="text-animation">
               <p className={styles.readMoreContent}>{item.readMore}</p>
               <p className={styles.readMoreBtn}>Readmore</p>
             </div>

@@ -16,10 +16,15 @@ const Toolkit: React.FC = () => {
     <section className={`${styles.toolkitContainer} container`}>
       <h1 className="heading">{heading}</h1>
       <div>
-        <img src={toolkitImg} alt="Toolkit" width={472} />
-        <p className={styles.content}>{content}</p>
-        <p className={styles.subContent}>{subContent}</p>
-        <form onSubmit={onSubmit}>
+        <img
+          src={toolkitImg}
+          className="text-animation"
+          alt="Toolkit"
+          width={472}
+        />
+        <p className={`${styles.content} text-animation`}>{content}</p>
+        <p className={`${styles.subContent} text-animation`}>{subContent}</p>
+        <form onSubmit={onSubmit} className="text-animation">
           <input
             type="email"
             className={styles.emailInput}

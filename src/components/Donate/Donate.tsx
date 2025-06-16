@@ -10,7 +10,7 @@ const Donate = () => {
     <section className={`${styles.donateContainer} container`}>
       <h1 className="heading">{heading}</h1>
       <div>
-        <p className={styles.para}>{para}</p>
+        <p className={`${styles.para} text-animation`}>{para}</p>
         <div className={styles.buttons}>
           {actions.map((d, i) => (
             <button key={i} className="primary-btn">
